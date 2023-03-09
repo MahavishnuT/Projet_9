@@ -12,7 +12,7 @@ export default (height) => {
       return (
         `
         <div class='vertical-navbar' style='height: ${height}vh;'>
-          <div class='layout-title'> Billed </div>
+          <div class='layout-title' data-testid='title'> Billed </div>
           <div id='layout-icon1' data-testid="icon-window">
             ${WindowIcon}
           </div>
