@@ -83,6 +83,7 @@ describe("Given I am connected as an employee", () => {
       const button = screen.getByTestId("btn-new-bill");
       const handleClickNewBill = jest.fn((e) => bills.handleClickNewBill(e));
       button.click("click", handleClickNewBill);
+      // Simulate the click on the button
       fireEvent.click(button);
       expect(screen.getAllByText("Envoyer une note de frais")).toBeTruthy();
     });
@@ -116,6 +117,7 @@ describe("Given I am a user connected as Employee", () => {
       expect(get).toHaveBeenCalled;
     });
   });
+
   describe("When an error occurs on API", () => {
     beforeEach(() => {
       jest.spyOn(mockedStore, "bills");
@@ -134,6 +136,8 @@ describe("Given I am a user connected as Employee", () => {
       document.body.appendChild(root);
       router();
     });
+
+    // Tests on errors 404 and 500
 
     test("fetches bills from an API and fails with 404 message error", async() => {
         const html = BillsUI({ error: 'Erreur 404' })
