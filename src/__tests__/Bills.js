@@ -131,7 +131,7 @@ describe("Given I am a user connected as Employee", () => {
           email: "a@a",
         })
       );
-      const root = document.createElement("div");
+      const otro = document.createElement("div");
       root.setAttribute("id", "root");
       document.body.appendChild(root);
       router();

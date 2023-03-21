@@ -28,6 +28,7 @@ const rows = (data) => {
     : "";
 };
 
+
 export default ({ data: bills, loading, error }) => {
   const modal = () => `
     <div class="modal fade" id="modaleFile" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" data-testid='modal' aria-hidden="true">
